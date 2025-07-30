@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&family=League+Script&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Slackey&family=WindSong:wght@400;500&display=swap');
+html,body{
+    height:100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Newsreader", serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: black;
+    scroll-behavior: smooth;
+    /* font-style: italic; */
+
+
+}
+
+
+.windsong-regular {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.windsong-medium {
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+.newsreader {
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.pimg1{ 
+    background-image:url('image/Untitled\ design.png');
+    min-height: 100vh;
+
+    /* img{
+        width: 100vw;    --viewport width
+        height: 100vh;
+    } */
+}
+
+.pimg2{
+    background-image:url('image/download 25.jpg');
+
+    min-height: 400px;
+    /* img{
+        width:100%;
+        height:65vh;
+    } */
+}
+
+.pimg3{
+    background-image:url('image/download 24.jpg');
+    
+    min-height: 400px;
+    /* img{
+        width:100%;
+        height:65vh;
+    } */
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;      /* ??? */
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;     /* MAIN POINT FOR PARALLAX */  
+}
+.ptext{
+    position:absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    h1{
+        font-size: 70px;
+        color: white;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+    #tag{
+        font-size: 30px;;
+    }
+    h2{
+        font-family: "Charm", cursive;
+    }
+
+}
+
+.textBg{
+    background: rgba(170, 149, 149, 0.571);
+    color: #fff;
+    padding: 20px;        /*  the background filling of text */
+    
+}
+
+.section {
+    padding: 50px 80px;
+    text-align: center;
+
+
+}
+
+.section-light{
+    background-color:rgba(170, 149, 149, 0.571);
+    color: white;
+    /* p{
+        font-family: "WindSong", cursive;
+        
+    } */
+}
+
+.section-dark{
+    background-color:#9D4352;
+    color:white;
+    /* p{
+        font-family: "WindSong", cursive;
+        
+    } */
+}
+
+.section-last{
+    background-color:rgba(170, 149, 149, 0.571);
+    color: black;
+    /* p{
+        font-family: "WindSong", cursive;
+        
+    } */
+}
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #DFDBE5;
+    min-height: 60px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    min-height: 30px;
+    
+}
+.navbar a:hover {
+    color: #9D4352;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links li {
+    margin-right: 30px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.nav-links a:hover {
+    color: #9D4352;
+}
+
+/* Navigation Icons - FIXED */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    /* Removed position: absolute and right properties */
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.icon-link:hover {
+    color: #9D4352;
+    background-color: rgba(157, 67, 82, 0.1);
+}
+
+.icon-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-text {
+    font-size: 16px;
+    font-weight: 600;
+    /* margin-top: 0; */
+}
+
+/* Cart Counter */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: 25px;
+    background-color: #9D4352;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-links li {
+        margin-right: 0;
+    }
+    
+    .nav-icons {
+        gap: 15px;
+        order: -1; /* This moves icons above nav links on mobile */
+
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        font-size: 12px;
+    }
+    
+    .icon-text {
+        display: none;
+    }
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 30px;
+    font-family: "Charm", cursive;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: none;
+}
+/*footer section */
+footer{
+    background-color:rgb(237, 219, 186);
+    display:flex;
+    gap:10px;
+    padding: 30px;
+    justify-content: space-around;
+    h3{
+        color:grey;
+        margin:10px 0;
+    }
+    ul{
+        list-style:none;    /* no arrows or bullets */
+    }
+}
+.newsletter input{
+    padding:5px 40px;
+}
+.socials{
+    display:flex;
+    justify-content: space-around;
+    font-size:28px;
+}
+
+.ptext-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.ptext-link:hover .textBg {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
